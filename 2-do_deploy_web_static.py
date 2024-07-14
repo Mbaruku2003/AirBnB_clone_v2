@@ -2,7 +2,7 @@
 """distributes an archive to your web servers."""
 from fabric.api import env, put, run
 import os
-env.hosts = ['54.175.146.193' '54.237.41.19']
+env.hosts = ['54.175.146.193', '54.237.41.19']
 env.key_filename = "../.ssh/schhool.pub"
 
 
