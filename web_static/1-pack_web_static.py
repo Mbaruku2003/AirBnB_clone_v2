@@ -12,7 +12,7 @@ def do_pack():
     if not os.path.exists("versions"):
         os.makedirs("versions")
     now = datetime.now()
-    archive_name = now.strftime("web_static_%Y%m%d%H%M%S. tgz")
+    archive_name = now.strftime("web_static_%Y%m%d%H%M%S.tgz")
     archive_path = os.path.join("versions", archive_name)
     result = local(f"tar -cvzf {archive_path} web_static")
     if result.succeeded:
