@@ -34,7 +34,7 @@ def python(text):
     """display “Python ”, followed by the value of the text variable."""
 
     replace_text = text.replace('_', ' ')
-    return f'Python {text}'
+    return f'Python {replace_text}'
 
 
 if __name__ == "__main__":
