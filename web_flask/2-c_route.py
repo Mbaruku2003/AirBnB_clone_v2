@@ -24,7 +24,8 @@ def hbnb():
 def c(text):
     """Displays C followed by the value of the text variabl."""
 
-    return f"C {text}"
+    replace_underscore = texp.replace('_', ' ')
+    return f"C {replace_underscore}"
 
 
 if __name__ == "__main__":
