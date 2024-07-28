@@ -37,7 +37,7 @@ def python(text):
     return 'Python {}'.format(replace_text)
 
 
-@app.route('/number/<n:int>', strict_slashes=False)
+@app.route('/number/<int:n>', strict_slashes=False)
 def number(n):
     """display “n is a number” only if n is an integer."""
 
