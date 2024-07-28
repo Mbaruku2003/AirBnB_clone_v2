@@ -56,7 +56,7 @@ def number_template(n):
 def number_odd_or_even(n):
     """display a HTML page only if n is an integer"""
 
-    evenodd =  "even" if n % 2 = 0 else "odd"
+    evenodd =  "even" if n % 2 == 0 else "odd"
     values = {
             "number": n,
             "evenodd": evenodd
