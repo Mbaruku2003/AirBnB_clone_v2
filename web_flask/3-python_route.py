@@ -28,8 +28,8 @@ def c(text):
     return f"C {replace_underscore}"
 
 
-@app.route('/python', defaults={'text': 'is_cool'})
-@app.route('/python/<text>')
+@app.route('/python', defaults={'text': 'is_cool'}, strict_slashes=False)
+@app.route('/python/<text>', strict_slashes=False)
 def python(text):
     """display Python, followed by the value of the text variable."""
 
