@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """ starts a Flask web application. """
 from flask import Flask
-from flask import render_template
 
 
 app = Flask(__name__)
@@ -45,12 +44,12 @@ def number(n):
     return '{} is a number'.format(n)
 
 
-@app.route('/number_template/<int:n>')
+@app.route('/number_template/<int:n>', strict_slashes=False)
 def number_template(n):
-    """ display a HTML page only if n is an integer. """
+    """display a HTML page only if n is an integer."""
 
-    return render_template('5-number.html' number=n)
+    return render_template('templates/5-number.html', number=n)
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=5000)
