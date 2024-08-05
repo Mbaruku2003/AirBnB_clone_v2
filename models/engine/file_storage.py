@@ -65,3 +65,28 @@ class FileStorage:
             key = f"{obj.__class__.__name__}.{obj.id}"
             if key in self.__objects:
                 del self.__objects[key]
+
+    def get(self, cls, id):
+        """retreive an object."""
+
+        if cls and id:
+            if cls in classes.values():
+                allobjects = self.all(cls)
+
+                for value in allobjects.values():
+                    if value.id == id:
+                        return value
+            return
+        return
+
+    def count(self, cls=None):
+        """count the number of objects in storage matchig the classes."""
+        
+        if not ls:
+            instance_ofallclasses = self.all()
+            return len(instance_ofallclasses)
+        if cls in classe.values():
+            allprevclassinstance = selfal(cls)
+            return len(allprevclassinstance)
+        if cls not in classes.values():
+            return
